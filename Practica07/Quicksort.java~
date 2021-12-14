@@ -1,0 +1,43 @@
+import java.util.Random;
+
+public class Quicksort{
+
+    public static String intercambio(int [] datos1){
+	for (int i = 0; i < datos1.length; i++){
+	    for (int j = 0; j < datos1.length; j++){
+		if(datos1[i] > datos1[j]){
+		    int temp = datos1[i];
+		    datos1[i] = datos1[j];
+		    datos1[j] = temp;
+		}
+	    }
+	}
+    }
+    
+    public static void main(String[] args){
+
+	Random rnd = new Random();
+	int [] datos = new int[10];
+	System.out.println("Elemento aleatorio: " + rnd.nextInt(10));
+
+	for (int k = 0; k < datos.length; k++){
+	    datos[k] = rnd.nextInt(10);
+	    System.out.println("Elemento aleatorio: " + datos[k]);
+	}
+
+	int pivote = 4;
+	int [] datos1 = new int[10];
+
+	datos1[0] = pivote;
+
+	System.out.println();
+	System.out.println("Pivote: " + datos1[0]);
+
+	for (int i = 0; i < datos1.length; i++){
+	    datos1[i] = rnd.nextInt(10);
+	    System.out.print(datos1[i] + " , ");
+	}
+
+	intercambio(datos1);
+    }
+}

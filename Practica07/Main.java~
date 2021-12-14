@@ -1,0 +1,25 @@
+public class Main{
+    public static void main(String[] args){
+	Empleado empleado1 = new Empleado();
+	Empleado empleado2 = new Empleado("Fernando López");
+	Operador operador = new Operador("Roberto Carlos");
+	Directivo directivo = new Directivo("Manuel Mora");
+	Oficial oficial = new Oficial("Pedro Palma");
+	Tecnico tecnico = new Tecnico("Maria Llosa");
+	System.out.println(empleado1.toString());
+	System.out.println(empleado2.toString());
+	System.out.println(empleado1.equals(empleado2));
+
+	System.out.println();
+	System.out.println(operador.toString());
+
+	System.out.println();
+	System.out.println(directivo.toString());
+
+	System.out.println();
+	System.out.println(oficial.toString());
+
+	System.out.println();
+	System.out.println(tecnico.toString());
+    }
+}
